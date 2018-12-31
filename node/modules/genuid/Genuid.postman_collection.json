@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "59d2443e-d727-4dd9-baa7-c65a6e93c012",
+		"name": "Genuid",
+		"description": "API Dcoumentation about Genuid Module.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Info Module",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/get/info/?apikey={yourapikey}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"get",
+						"info",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}"
+						}
+					]
+				},
+				"description": "Get Info Module\n---\nGet info detail about Genuid Module."
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UUID v3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Namespace",
+							"value": "",
+							"description": "Length is 36-36 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Name",
+							"value": "",
+							"description": "Length is 1-36 {required}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/generate/v3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"generate",
+						"v3"
+					]
+				},
+				"description": "Generate UUID v3 with using MD5\n\nNote:\n- Valid RFC 4122 Compliant\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UUID v4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/generate/v4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"generate",
+						"v4"
+					]
+				},
+				"description": "Generate UUID v4 with using Random or Pseudo bytes\n\nNote:\n- Valid RFC 4122 Compliant\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UUID v5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Namespace",
+							"value": "",
+							"description": "Length is 36-36 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Name",
+							"value": "",
+							"description": "Length is 1-36 {required}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/generate/v5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"generate",
+						"v5"
+					]
+				},
+				"description": "Generate UUID v5 with using SHA1\n\nNote:\n- Valid RFC 4122 Compliant\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UID DecHex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Prefix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						},
+						{
+							"key": "Suffix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/uid/dechex",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"uid",
+						"dechex"
+					]
+				},
+				"description": "Generate Short ID very fast with uniqid + crc32 + dechex + randomizer\n\nNote:\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UID BaseConvert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Prefix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						},
+						{
+							"key": "Suffix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/uid/baseconvert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"uid",
+						"baseconvert"
+					]
+				},
+				"description": "Generate Short ID very fast with uniqid + crc32 + base_convert + randomizer\n\nNote:\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UID Uniqid Long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Prefix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						},
+						{
+							"key": "Suffix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/uid/uniqid/long",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"uid",
+						"uniqid",
+						"long"
+					]
+				},
+				"description": "Generate Unique ID very fast with uniqid + more_entropy + randomizer\n\nNote:\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UID Uniqid Simple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Prefix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						},
+						{
+							"key": "Suffix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/uid/uniqid/simple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"uid",
+						"uniqid",
+						"simple"
+					]
+				},
+				"description": "Generate Unique ID very fast with uniqid + randomizer\n\nNote:\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UID Uniqid Numeric",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Prefix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						},
+						{
+							"key": "Suffix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/uid/uniqid/numeric",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"uid",
+						"uniqid",
+						"numeric"
+					]
+				},
+				"description": "Generate Short ID very fast with uniqid + crc32 + randomizer\n\nNote:\n- All User Role is able to generate"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate UID Unique Custom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Username",
+							"value": "{yourusername}",
+							"description": "Length is 1-50 {alphanumeric,lowercase,required}",
+							"type": "text"
+						},
+						{
+							"key": "Token",
+							"value": "{yourtoken}",
+							"description": "Length is 1-250 {required}",
+							"type": "text"
+						},
+						{
+							"key": "Prefix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						},
+						{
+							"key": "Suffix",
+							"value": "",
+							"description": "{optional}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/genuid/uid/unique/custom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"genuid",
+						"uid",
+						"unique",
+						"custom"
+					]
+				},
+				"description": "Generate Unique ID very fast with random + pseudo bytes\n\nNote:\n- All User Role is able to generate"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bd3a3270-41fa-4bd1-be0d-d9278e658d08",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6f5ac60f-b33c-482e-9c47-c09d672f49f0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
